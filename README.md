@@ -13,4 +13,4 @@ In the case of Distance vector routing protocol:
               Compiling DVRPClient afterthe port is generated: javac DVRPClient.java
               Running DVRPClient: java DVRPClient
 Enter inputs with ASCII inputs, if any node is entered with an error we can delete it with the delete function in the GUI.
-For the routing table to appear
+For the routing table to appear click calculate button in the gui.
