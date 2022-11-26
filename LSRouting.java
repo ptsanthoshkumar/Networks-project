@@ -9,8 +9,6 @@ import javax.swing.*;
 public class LSRouting {
 
   JTextArea ta;
-
-  //Constructor , GUI code
   LSRouting() {
     JFrame frame = new JFrame("Link State Routing");
     ta = new JTextArea();
@@ -27,27 +25,18 @@ public class LSRouting {
     frame.setVisible(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   }
-
-
-  //Function to Display Routing Table Calculators.
   public void display(String s) {
     ta.append(s);
   }
-
-
-  //Function to calculate Routing Tables Using BFA.
   public static String routingcal(int[][] graph, int source) {
     StringBuilder sb = new StringBuilder();
     int count = graph.length;
-
     boolean[] visitedVertex = new boolean[count];
     int[] distance = new int[count];
     for (int i = 0; i < count; i++) {
       visitedVertex[i] = false;
       distance[i] = Integer.MAX_VALUE;
     }
-
-
     distance[source] = 0;
     for (int i = 0; i < count; i++) {
       int u = findMinDistance(distance, visitedVertex);
@@ -84,8 +73,6 @@ public class LSRouting {
 
     return sb.toString();
   }
-
-  //Function to find minimum distance.
   private static int findMinDistance(int[] distance, boolean[] visitedVertex) {
     int minDistance = Integer.MAX_VALUE;
     int minDistanceVertex = -1;
@@ -97,14 +84,6 @@ public class LSRouting {
     }
     return minDistanceVertex;
   }
-
-  
-
-
-
-
-
-//Main Function
   public static void main(String[] args) {
     int graph[][] = new int[][] {
       { 0, 3, 0, 0, 0, 0, 0, 8, 0 },
@@ -116,14 +95,13 @@ public class LSRouting {
       { 0, 0, 0, 14, 0, 2, 0, 1, 6 },
       { 8, 10, 0, 0, 0, 0, 1, 0, 7 },
       { 0, 0, 2, 0, 0, 0, 6, 7, 0 }
-    }; //Initalizing the Graph
+    };
 
-    LSRouting T = new LSRouting(); //Instantiating the object.
-
+    LSRouting T = new LSRouting();
     String str = new String();
     for (int m = 0; m < graph.length; m++) {
       str+=T.routingcal(graph, m);
     }
-    T.display(str); //Calling Display Function
+    T.display(str);
   }
 }
