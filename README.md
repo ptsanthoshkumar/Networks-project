@@ -3,7 +3,7 @@ Distance Vector Routing Protocol (DVRP) is a dynamic routing protocol in which e
 Link State Routing Protocol (LSRP) is a dynamic routing protocol in which each router shares knowledge of its neighbors with every other router in the network. Information exchange takes place only when there is a change. The underlying principle for this protocol is Dijkstra’s Algorithm. 
 Here we design the Routing Table Calculator. This routing table calculator will be provided with the information of nodes which includes distance and the connections with others. we will get output which will contain routing tables of every node.
 
-Compiling the LSRouting.java file is pretty straight forward: javac LSROuting.java
+Compiling the LSRouting.java file is pretty straight forward: javac LSRouting.java
 Running LSRouting.java: java LSRouting
 
 In the case of Distance vector routing protocol:
